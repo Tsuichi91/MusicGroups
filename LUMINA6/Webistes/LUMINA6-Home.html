@@ -91,8 +91,55 @@
       justify-content: center;
     }
   </style>
+<style>
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 2;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffffffcc;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 14px;
+      cursor: pointer;
+      display: none;
+      z-index: 3;
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <a href="#top">Home</a>
+    <a href="LUMINA6/Webistes/LUMINA6-Members.html">Members</a>
+    <a href="LUMINA6/Webistes/LUMINA6-Discography.html">Discography</a>
+    <a href="LUMINA6/Webistes/LUMINA6-Tour.html">Tour</a>
+    <a href="LUMINA6/Webistes/LUMINA6-Music.html">Music</a>
+    <a href="LUMINA6/Webistes/LUMINA6-Universe.html">Universe</a>
+    <a href="LUMINA6/Webistes/LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6/Webistes/LUMINA6-Countdown.html">Countdown</a>
+  </nav>
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Back to Top</button>
   <div class="content">
     <h1>LU●MINA6</h1>
     <p></p>
@@ -111,7 +158,26 @@
       <a href="LUMINA6/Webistes/LUMINA6-Music.html" class="tile">
         <img src="LUMINA6/Logos/LUMINA6_Music_Interface.png" alt="Music Player">
       </a>
+      <a href="LUMINA6/Webistes/LUMINA6-Universe.html" class="tile">
+        <img src="LUMINA6/Logos/LUMINA6_Universe.png" alt="The Universe">
+      </a>
+      <a href="LUMINA6/Webistes/LUMINA6-Quiz.html" class="tile">
+        <img src="LUMINA6/Logos/LUMINA6_Quiz.png" alt="Bias Quiz">
+      </a>
+      <a href="LUMINA6/Webistes/LUMINA6-Countdown.html" class="tile">
+        <img src="LUMINA6/Logos/LUMINA6_Countdown.png" alt="Comeback Countdown">
+      </a>
     </div>
   </div>
+<script>
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
