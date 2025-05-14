@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 & PR!SM</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to right, #a2d2ff, #cdb4db);
+      animation: fadeIn 1s ease-in;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      overflow: hidden;
+      padding-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      margin-bottom: 0;
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    .welcome-space {
+      height: 60px;
+    }
+
+    .blink {
+      animation: blink 1.2s infinite;
+      display: inline-block;
+    }
+
+    .band-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 200px;
+      margin-bottom: 60px;
+      position: relative;
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    .logo-wrapper {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: popIn 1s ease-out forwards;
+    }
+
+    .logo-wrapper:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    }
+
+    .band-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+      animation: popIn 1.2s ease-out forwards;
+    }
+
+    .band-logo:hover {
+      transform: scale(1.05);
+    }
+
+    .floating-name {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: white;
+      text-shadow: 2px 2px 6px black;
+      animation: orbit 10s linear infinite;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .floating-name span {
+      position: absolute;
+    }
+
+    .logo-wrapper:first-child .floating-name span {
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff, 0 0 10px #f0f, 0 0 15px #f0f; }
+      to   { text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 25px #0ff; }
+    }
+
+    .logo-wrapper:last-child .floating-name span {
+      animation: sparkle 1.5s infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.5; text-shadow: 0 0 10px #fff; }
+    }
+
+    @keyframes orbit {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <script>
+    function showDetails(bandName) {
+      alert("Mehr Informationen über " + bandName + " kommen bald!");
+    }
+
+    function setupAudio(logoSelector, audioPath) {
+      const logo = document.querySelector(logoSelector);
+      const audio = new Audio(audioPath);
+      audio.preload = 'auto';
+
+      logo.addEventListener('mouseenter', () => {
+        audio.currentTime = 0;
+        audio.play();
+      });
+
+      logo.addEventListener('mouseleave', () => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      setupAudio(".logo-wrapper:first-child .band-logo", "LU●MINA6/Music/Rise UP MuLa.mp3");
+      setupAudio(".logo-wrapper:last-child .band-logo", "PR!SM/Music/Glow Up MuLa.mp3");
+    });
+  </script>
+</head>
+<body>
+  <h1>✨<span class="blink">WΞLCΘMΞ</span>🌈</h1>
+  <div class="welcome-space"></div>
+
+  <div class="band-logos">
+    <div class="logo-wrapper">
+      <a href="LU●MINA6/Websites/LUMINA6-Home.html"><img class="band-logo" src="LU●MINA6/Logos&Posters/Band_Logo.png" alt="Band 1 Logo"></a>
+      <div class="floating-name">
+        <span style="transform: rotate(0deg) translateY(-180px);">LU●MINA6</span>
+        <span style="transform: rotate(72deg) translateY(-180px);">ลู●มิน่า6</span>
+        <span style="transform: rotate(144deg) translateY(-180px);">露●米娜6</span>
+        <span style="transform: rotate(216deg) translateY(-180px);">ル●ミナ6</span>
+        <span style="transform: rotate(288deg) translateY(-180px);">루●미나6</span>
+        <span style="transform: rotate(360deg) translateY(-180px);">LU●MINA6</span>
+      </div>
+    </div>
+
+    <div class="logo-wrapper">
+      <a href="PR!SM.html"><img class="band-logo" src="PR!SM/20250509_1611_PR!SM Multilingual Logo_simple_compose_01jttp3x7ae4q9ffs15bgxbjk0.png" alt="Band 2 Logo"></a>
+      <div class="floating-name">
+        <span style="transform: rotate(0deg) translateY(-180px);">PR!SM</span>
+        <span style="transform: rotate(72deg) translateY(-180px);">棱镜</span>
+        <span style="transform: rotate(144deg) translateY(-180px);">プリズム</span>
+        <span style="transform: rotate(216deg) translateY(-180px);">프리즘</span>
+        <span style="transform: rotate(288deg) translateY(-180px);">พริซึม</span>
+        <span style="transform: rotate(360deg) translateY(-180px);">PRISM</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
