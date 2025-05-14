@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LU●MINA6 - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: url("Logos/LUMINA6_Logo.png") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: -1;
+        }
+
+        header {
+            background-color: #111;
+            padding: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #222;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .welcome {
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 800px;
+            font-size: 1.2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 2rem;
+            justify-items: center;
+        }
+
+        .tile {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+            text-align: center;
+            width: 100%;
+            max-width: 150px;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+        }
+
+        .tile img {
+            width: 100%;
+            height: auto;
+        }
+
+        .tile-title {
+            padding: 0.5rem;
+            font-weight: bold;
+            background-color: #eee;
+        }
+
+        @media screen and (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LU●MINA6</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="LUMINA6/LUMINA6-Members.html">Members</a>
+        <a href="LUMINA6/LUMINA6-Discography.html">Discography</a>
+        <a href="LUMINA6/LUMINA6-Tour.html">Tour</a>
+        <a href="LUMINA6/LUMINA6-Tickets.html">Tickets</a>
+        <a href="LUMINA6/LUMINA6-Music.html">Music</a>
+        <a href="LUMINA6/LUMINA6-Countdowns.html">Countdowns</a>
+        <a href="LUMINA6/Lumina6-Univers.html">Univers</a>
+        <a href="LUMINA6/LUMINA6-Quiz.html">Quiz</a>
+        <a href="LUMINA6/LUMINA6-Downloads.html">Downloads</a>
+    </nav>
+    <section class="welcome">
+        <p>Welcome to LU●MINA6's official homepage! Discover everything about our members, music, tour dates and more!</p>
+    </section>
+    <section class="grid">
+        <a class="tile" href="LUMINA6/LUMINA6-Members.html">
+            <img src="LUMINA6/Logos/LUMINA6_Member_Profiles.png" alt="Members">
+            <div class="tile-title">Members</div>
+        </a>
+        <a class="tile" href="LUMINA6/LUMINA6-Discography.html">
+            <img src="LUMINA6/Logos/LUMINA6_Discography.png" alt="Discography">
+            <div class="tile-title">Discography</div>
+        </a>
+        <a class="tile" href="LUMINA6/LUMINA6-Tour.html">
+            <img src="LUMINA6/Logos/LUMINA6_Tour_Logo.png" alt="Tour">
+            <div class="tile-title">Tour Dates</div>
+        </a>
+        <a class="tile" href="LUMINA6/LUMINA6-Music.html">
+            <img src="LUMINA6/Logos/LUMINA6_Music_Interface.png" alt="Music">
+            <div class="tile-title">Music Player</div>
+        </a>
+        <a class="tile" href="LUMINA6/Lumina6-Univers.html">
+            <img src="LUMINA6/Logos/LUMINA6_Univers.png" alt="Universe">
+            <div class="tile-title">LU●MINA6 Univers</div>
+        </a>
+        <a class="tile" href="LUMINA6/LUMINA6-Countdowns.html">
+            <img src="LUMINA6/Logos/LUMINA6_COUNTDOWN.png" alt="Countdowns">
+            <div class="tile-title">Countdowns</div>
+        </a>
+        <a class="tile" href="LUMINA6/LUMINA6-Quiz.html">
+            <img src="LUMINA6/Logos/LUMINA6_Quiz.png" alt="Quiz">
+            <div class="tile-title">Quizes</div>
+        </a>
+        <a class="tile" href="LUMINA6/LUMINA6-Downloads.html">
+            <img src="LUMINA6/Logos/LUMINA6-Download.png" alt="Downloads">
+            <div class="tile-title">Downloads</div>
+        </a>
+    </section>
+</body>
+</html>
