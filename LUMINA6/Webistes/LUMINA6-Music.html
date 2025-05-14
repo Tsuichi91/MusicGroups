@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU•MINA6 – Music</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f6d5f7, #fbe9d7);
+      color: #4a148c;
+    }
+    header {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #d63384;
+      border-bottom: 2px solid #d63384;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .release-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+    .release-card img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto 16px;
+    }
+    .release-title {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .audio-player {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto;
+    }
+    .tracklist {
+      margin-top: 12px;
+    }
+    .tracklist li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>LU•MINA6 – Music</header>
+  <div class="container">
+
+    <div class="release-card">
+      <img src="LUMINA6/Music/Luminate-Album/Luminate_Album_Cover.png" alt="LUMINATE">
+      <div class="release-title">LUMINATE</div>
+      <audio class="audio-player" id="player-luminate" controls>
+        <source id="source-luminate" src="music/LuminatePlaylist.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <ul class="tracklist">
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/01. Starlight Code.mp3')">1. Starlight Code</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/02. No Sleep in Neon.mp3')">2. No Sleep in Neon</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/03. Electric Bloom.mp3')">3. Electric Bloom</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/04. Faultline.mp3')">4. Faultline</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/05. Echo-Shadow.mp3')">5. Echo/Shadow</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/06. Make Me Real (너라는 빛).mp3')">6. Make Me Real (너라는 빛)</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/07. Tide Loop.mp3')">7. Tide Loop</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/08. City Ghosts.mp3')">8. City Ghosts</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/09. Backlight.mp3')">9. Backlight</button></li>
+        <li><button onclick="setTrack('player-luminate', 'LUMINA6/Music/Luminate-Album/10. We Burn Quiet.mp3')">10. We Burn Quiet</button></li>
+      </ul>
+    </div>
+
+    <div class="release-card">
+      <img src="LUMINA6/Music/Prism-Heart-Album/Prism-Heart_Album_Cover.png" alt="PRISM//HEART">
+      <div class="release-title">PRISM//HEART</div>
+      <audio class="audio-player" id="player-prism" controls>
+        <source id="source-prism" src="music/PrismHeartPlaylist.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <ul class="tracklist">
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/01. PRISM HEART (Intro).mp3')">1. PRISM//HEART (Intro)</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/02. SUGARSTORM.mp3')">2. SUGARSTORM</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/03. Heartline Jump.mp3')">3. Heartline Jump</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/04. Midnight Verse.mp3')">4. Midnight Verse</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/05. Lovertype_∞.mp3')">5. Lovertype:∞</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/06. If You Say So.mp3')">6. If You Say So</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/07.W A V E R (Interlude).mp3')">7. W A V E R</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/08. Butter Body.mp3')">8. Butter Body</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/09. Hologram Touch.mp3')">9. Hologram Touch</button></li>
+        <li><button onclick="setTrack('player-prism', 'LUMINA6/Music/Prism-Heart-Album/10. Half Light (너와 나의 색).mp3')">10. Half Light (너와 나의 색)</button></li>
+      </ul>
+    </div>
+
+    <div class="release-card">
+      <img src="covers/infinite-room.jpg" alt="INFINITE ROOM">
+      <div class="release-title">INFINITE ROOM</div>
+      <audio class="audio-player" id="player-infinite" controls>
+        <source id="source-infinite" src="music/InfiniteRoomPlaylist.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <ul class="tracklist">
+        <li><button onclick="setTrack('player-infinite', 'music/GravityLies.mp3')">1. Gravity Lies</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/DigitalEden.mp3')">2. Digital Eden</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/LucidOut.mp3')">3. Lucid Out</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/ColdroomCall.mp3')">4. Coldroom Call</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/Room6.mp3')">5. Room 6</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/StaticSkin.mp3')">6. STATIC//SKIN</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/GlitchDarling.mp3')">7. Glitch Darling</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/AFK.mp3')">8. AFK (Away From Knowing)</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/Invisible.mp3')">9. IN//VISIBLE</button></li>
+        <li><button onclick="setTrack('player-infinite', 'music/6Degrees.mp3')">10. 6° of Separation</button></li>
+      </ul>
+    </div>
+
+    <div class="release-card">
+      <img src="covers/vox6.jpg" alt="VOX:6">
+      <div class="release-title">VOX:6</div>
+      <audio class="audio-player" id="player-vox6" controls>
+        <source id="source-vox6" src="music/Vox6Playlist.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <ul class="tracklist">
+        <li><button onclick="setTrack('player-vox6', 'music/6AMVoices.mp3')">1. 6AM Voices</button></li>
+        <li><button onclick="setTrack('player-vox6', 'music/PaperSky.mp3')">2. Paper Sky</button></li>
+        <li><button onclick="setTrack('player-vox6', 'music/InMyLanguage.mp3')">3. In My Language</button></li>
+        <li><button onclick="setTrack('player-vox6', 'music/StillYou.mp3')">4. Still You (너만)</button></li>
+      </ul>
+    </div>
+
+    <div class="release-card">
+      <img src="covers/glowline.jpg" alt="GLOWLINE">
+      <div class="release-title">GLOWLINE</div>
+      <audio class="audio-player" id="player-glowline" controls>
+        <source id="source-glowline" src="music/GlowlinePlaylist.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <ul class="tracklist">
+        <li><button onclick="setTrack('player-glowline', 'music/Glowline.mp3')">1. Glowline</button></li>
+        <li><button onclick="setTrack('player-glowline', 'music/TalkToMeInColor.mp3')">2. Talk to Me (In Color)</button></li>
+        <li><button onclick="setTrack('player-glowline', 'music/DuskDancer.mp3')">3. Dusk Dancer</button></li>
+        <li><button onclick="setTrack('player-glowline', 'music/Restart.mp3')">4. RE:Start</button></li>
+      </ul>
+        <div class="release-card">
+      <img src="covers/singles.jpg" alt="Singles">
+      <div class="release-title">Singles</div>
+      <audio class="audio-player" id="player-singles" controls>
+        <source id="source-singles" src="music/SinglesPlaylist.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <ul class="tracklist">
+        <li><button onclick="setTrack('player-singles', 'music/LightOnMe.mp3')">1. Light On Me</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/ZeroMotion.mp3')">2. Zero Motion</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/HushSignal.mp3')">3. Hush Signal</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/VelvetCrown.mp3')">4. Velvet Crown</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/Mirrors.mp3')">5. MIRRORS</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/Playdead.mp3')">6. PLAYDEAD</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/MoonLikeUs.mp3')">7. Moon Like Us</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/ButterflyTension.mp3')">8. Butterfly Tension</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/LouderThanLight.mp3')">9. LOUDER THAN LIGHT</button></li>
+        <li><button onclick="setTrack('player-singles', 'music/SerotoninFever.mp3')">10. Serotonin Fever</button></li>
+      </ul>
+    </div>
+
+  </div>
+<script>
+  function setTrack(playerId, sourceUrl) {
+    const player = document.getElementById(playerId);
+    const source = player.querySelector('source');
+    source.src = sourceUrl;
+    player.load();
+    player.play();
+  }
+</script>
+</body>
+</html>
 
