@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 - Tour</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("Logos/LUMINA6_Logo.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .tour-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .tour-section {
+      margin-bottom: 2rem;
+    }
+    .tour-section h2,
+    .tour-section h3 {
+      text-align: center;
+    }
+    .tour-section h3 {
+      margin-top: 2rem;
+    }
+    .tour-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    .tour-table th,
+    .tour-table td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .tour-table th {
+      background-color: #f4f4f4;
+    }
+    .tickets-link {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .tickets-link:hover {
+      text-decoration: underline;
+    }
+    .past-tours {
+      opacity: 0.6;
+      font-style: italic;
+    }
+    .finale {
+      background-color: #ffe0e0;
+      border: 2px solid #cc0000;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .map-placeholder {
+      width: 100%;
+      height: 500px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #eee;
+      text-align: center;
+      line-height: 500px;
+      font-size: 1.2rem;
+      color: #555;
+      margin-top: 2rem;
+    }
+    .map-marker:hover {
+    z-index: 11;
+  }
+  .map-marker[data-target]:hover {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.map-marker').forEach(marker => {
+      marker.addEventListener('click', () => {
+        const targetId = marker.getAttribute('data-target');
+        if (targetId) {
+          const section = document.getElementById(targetId);
+          if (section) section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
+</script>
+</head>
+<body>
+  <header>
+    <h1>LU●MINA6 - Tour</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="LUMINA6-Home.html">LU●MINA6 Home</a>
+    <a href="LUMINA6-Members.html">Members</a>
+    <a href="LUMINA6-Discography.html">Discography</a>
+    <a href="LUMINA6-Music.html">Music</a>
+    <a href="LUMINA6-Countdowns.html">Countdowns</a>
+    <a href="Lumina6-Univers.html">Univers</a>
+    <a href="LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6-Downloads.html">Downloads</a>
+  </nav>
+  <main class="tour-container">
+    
+<div style="text-align: center; margin-bottom: 1rem;">
+  <strong>Map Legend:</strong>
+  <span style="display: inline-block; width: 14px; height: 14px; background-color: #e63946; border-radius: 50%; margin: 0 5px;"></span> Leg 1
+  <span style="display: inline-block; width: 14px; height: 14px; background-color: #f4a261; border-radius: 50%; margin: 0 5px;"></span> Leg 2
+  <span style="display: inline-block; width: 14px; height: 14px; background-color: #2a9d8f; border-radius: 50%; margin: 0 5px;"></span> Leg 3
+  <span style="display: inline-block; width: 14px; height: 14px; background-color: #457b9d; border-radius: 50%; margin: 0 5px;"></span> Leg 4
+</div>
+      <div class="map-placeholder" style="position: relative; background: url('LUMINA6/Maps/WorldMapBase.png') center/contain no-repeat;">
+        <span class="map-marker leg1" style="top: 38%; left: 48%;" data-tooltip="New York City, USA 🇺🇸" data-target="leg1"></span>
+        <span class="map-marker leg1" style="top: 39%; left: 45%;" data-tooltip="Toronto, Canada 🇨🇦" data-target="leg1"></span>
+        <span class="map-marker leg1" style="top: 40%; left: 47%;" data-tooltip="Chicago, USA 🇺🇸" data-target="leg1"></span>
+        <span class="map-marker leg1" style="top: 43%; left: 46%;" data-tooltip="Atlanta, USA 🇺🇸" data-target="leg1"></span>
+        <span class="map-marker leg1" style="top: 45%; left: 30%;" data-tooltip="San Francisco, USA 🇺🇸" data-target="leg1"></span>
+        <span class="map-marker leg1" style="top: 46%; left: 32%;" data-tooltip="Los Angeles, USA 🇺🇸" data-target="leg1"></span>
+        <span class="map-marker leg1" style="top: 42%; left: 33%;" data-tooltip="Vancouver, Canada 🇨🇦" data-target="leg1"></span>
+        <span class="map-marker leg2" style="top: 42%; left: 35%;" data-tooltip="Mexico City, MEX 🇲🇽" data-target="leg2"></span>
+        <span class="map-marker leg2" style="top: 51%; left: 38%;" data-tooltip="Bogotá, COL 🇨🇴" data-target="leg2"></span>
+        <span class="map-marker leg2" style="top: 53%; left: 35%;" data-tooltip="Lima, PER 🇵🇪" data-target="leg2"></span>
+        <span class="map-marker leg2" style="top: 56%; left: 34%;" data-tooltip="Santiago, CHI 🇨🇱" data-target="leg2"></span>
+        <span class="map-marker leg2" style="top: 55%; left: 32%;" data-tooltip="São Paulo, BRA 🇧🇷" data-target="leg2"></span>
+        <span class="map-marker leg2" style="top: 54%; left: 30%;" data-tooltip="Buenos Aires, ARG 🇦🇷" data-target="leg2"></span>
+        <span class="map-marker leg3" style="top: 43%; left: 75%;" data-tooltip="Seoul, KOR 🇰🇷" data-target="leg3"></span>
+        <span class="map-marker leg3" style="top: 44%; left: 76%;" data-tooltip="Tokyo, JPN 🇯🇵" data-target="leg3"></span>
+        <span class="map-marker leg3" style="top: 52%; left: 72%;" data-tooltip="Bangkok, THA 🇹🇭" data-target="leg3"></span>
+        <span class="map-marker leg3" style="top: 47%; left: 77%;" data-tooltip="Taipei, TPE 🇹🇼" data-target="leg3"></span>
+        <span class="map-marker leg3" style="top: 43%; left: 70%;" data-tooltip="Beijing, CHN 🇨🇳" data-target="leg3"></span>
+        <span class="map-marker leg3" style="top: 55%; left: 78%;" data-tooltip="Manila, PH 🇵🇭" data-target="leg3"></span>
+        <span class="map-marker leg3" style="top: 60%; left: 80%;" data-tooltip="Jakarta, IDN 🇮🇩" data-target="leg3"></span>
+        <span class="map-marker leg4" style="top: 42%; left: 62%;" data-tooltip="Paris, FRA 🇫🇷" data-target="leg4"></span>
+        <span class="map-marker leg4" style="top: 41%; left: 68%;" data-tooltip="Berlin, GER 🇩🇪" data-target="leg4"></span>
+        <span class="map-marker leg4" style="top: 40%; left: 63%;" data-tooltip="Amsterdam, NLD 🇳🇱" data-target="leg4"></span>
+        <span class="map-marker leg4" style="top: 43%; left: 61%;" data-tooltip="Madrid, ESP 🇪🇸" data-target="leg4"></span>
+        <span class="map-marker leg4" style="top: 45%; left: 65%;" data-tooltip="Milan, ITA 🇮🇹" data-target="leg4"></span>
+        <span class="map-marker leg4" style="top: 40%; left: 65%;" data-tooltip="London, UK 🇬🇧" data-target="leg4"></span>
+        <span class="map-marker leg4" style="top: 42%; left: 70%;" data-tooltip="Warsaw, POL 🇵🇱" data-target="leg4"></span>
+      </div>
+    </section>
+    <section class="tour-section">
+      <h2>LU●MINA6 WORLD TOUR 2026<br><em>RISE UP: ONE LIGHT, SIX VOICES</em></h2>
+
+      <h3 id="leg1">Leg 1: North America – “EAST TO WEST”</h3>
+      <table class="tour-table">
+        <thead><tr><th>Date</th><th>City</th><th>Venue</th><th>Tickets</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>Feb 14</td><td>🇺🇸 New York City</td><td>Madison Square Garden</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$120 USD</td></tr>
+          <tr><td>Feb 17</td><td>🇨🇦 Toronto</td><td>Scotiabank Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$130 CAD</td></tr>
+          <tr><td>Feb 20</td><td>🇺🇸 Chicago</td><td>United Center</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$110 USD</td></tr>
+          <tr><td>Feb 24</td><td>🇺🇸 Atlanta</td><td>State Farm Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$100 USD</td></tr>
+          <tr><td>Feb 28</td><td>🇺🇸 Los Angeles</td><td>Kia Forum</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$125 USD</td></tr>
+          <tr><td>Mar 2</td><td>🇺🇸 San Francisco</td><td>Chase Center</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$115 USD</td></tr>
+          <tr><td>Mar 5</td><td>🇨🇦 Vancouver</td><td>Rogers Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$120 CAD</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="leg2">Leg 2: Latin America – “FUEGO Y ORGULLO”</h3>
+      <table class="tour-table">
+        <thead><tr><th>Date</th><th>City</th><th>Venue</th><th>Tickets</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>Mar 10</td><td>🇲🇽 Mexico City</td><td>Auditorio Nacional</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$1500 MXN</td></tr>
+          <tr><td>Mar 14</td><td>🇨🇴 Bogotá</td><td>Movistar Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$95,000 COP</td></tr>
+          <tr><td>Mar 17</td><td>🇵🇪 Lima</td><td>Arena Perú</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>S/. 230 PEN</td></tr>
+          <tr><td>Mar 21</td><td>🇨🇱 Santiago</td><td>Movistar Arena Santiago</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$48,000 CLP</td></tr>
+          <tr><td>Mar 25</td><td>🇧🇷 São Paulo</td><td>Allianz Parque</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>R$ 300 BRL</td></tr>
+          <tr><td>Mar 29</td><td>🇦🇷 Buenos Aires</td><td>Luna Park Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>$25,000 ARS</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="leg3">Leg 3: Asia – “SHINE IN 6 LANGUAGES”</h3>
+      <table class="tour-table">
+        <thead><tr><th>Date</th><th>City</th><th>Venue</th><th>Tickets</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>May 5</td><td>🇰🇷 Seoul</td><td>KSPO Dome</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>₩132,000 KRW</td></tr>
+          <tr><td>May 9</td><td>🇯🇵 Tokyo</td><td>Tokyo Dome</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>¥11,000 JPY</td></tr>
+          <tr><td>May 13</td><td>🇹🇭 Bangkok</td><td>Impact Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>฿2,900 THB</td></tr>
+          <tr><td>May 17</td><td>🇹🇼 Taipei</td><td>Taipei Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>NT$3,200 TWD</td></tr>
+          <tr><td>May 21</td><td>🇨🇳 Beijing</td><td>Cadillac Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>¥580 CNY</td></tr>
+          <tr><td>May 25</td><td>🇵🇭 Manila</td><td>Mall of Asia Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>₱4,200 PHP</td></tr>
+          <tr><td>May 29</td><td>🇮🇩 Jakarta</td><td>Istora Senayan</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>Rp950,000 IDR</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="leg4">Leg 4: Europe – “VOICES UNITE”</h3>
+      <table class="tour-table">
+        <thead><tr><th>Date</th><th>City</th><th>Venue</th><th>Tickets</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>Jul 7</td><td>🇫🇷 Paris</td><td>Accor Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>€90 EUR</td></tr>
+          <tr><td>Jul 10</td><td>🇩🇪 Berlin</td><td>Mercedes-Benz Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>€85 EUR</td></tr>
+          <tr><td>Jul 14</td><td>🇳🇱 Amsterdam</td><td>Ziggo Dome</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>€88 EUR</td></tr>
+          <tr><td>Jul 18</td><td>🇪🇸 Madrid</td><td>WiZink Center</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>€80 EUR</td></tr>
+          <tr><td>Jul 22</td><td>🇮🇹 Milan</td><td>Mediolanum Forum</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>€84 EUR</td></tr>
+          <tr><td>Jul 26</td><td>🇬🇧 London</td><td>The O2 Arena</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>£75 GBP</td></tr>
+          <tr><td>Jul 30</td><td>🇵🇱 Warsaw</td><td>Tauron Arena Kraków</td><td><a href="LUMINA6-Tickets.html" class="tickets-link">Buy</a></td><td>370 PLN</td></tr>
+        </tbody>
+      </table>
+
+      <div class="finale">
+        <h3>Finale: RISE WORLD NIGHT – GLOBAL LIVESTREAM</h3>
+        <p>📅 August 15 &ndash; Live from Seoul<br>
+        🌍 Multilingual Fan Segments · 🎵 Debut of "ONE VOICE"</p>
+      </div>
+    </section>
+
+    
+      <div class="map-placeholder" style="position: relative; background: url('Pictures/WorldMapBase.png') center/contain no-repeat;">
+  <span class="map-marker" style="top: 38%; left: 48%;" data-tooltip="New York City, USA 🇺🇸"></span>
+  <span class="map-marker" style="top: 39%; left: 45%;" data-tooltip="Toronto, Canada 🇨🇦"></span>
+  <span class="map-marker" style="top: 40%; left: 47%;" data-tooltip="Chicago, USA 🇺🇸"></span>
+  <span class="map-marker" style="top: 43%; left: 46%;" data-tooltip="Atlanta, USA 🇺🇸"></span>
+  <span class="map-marker" style="top: 45%; left: 30%;" data-tooltip="San Francisco, USA 🇺🇸"></span>
+  <span class="map-marker" style="top: 46%; left: 32%;" data-tooltip="Los Angeles, USA 🇺🇸"></span>
+  <span class="map-marker" style="top: 42%; left: 33%;" data-tooltip="Vancouver, Canada 🇨🇦"></span>
+  <span class="map-marker" style="top: 42%; left: 35%;" data-tooltip="Mexico City, MEX 🇲🇽"></span>
+  <span class="map-marker" style="top: 51%; left: 38%;" data-tooltip="Bogotá, COL 🇨🇴"></span>
+  <span class="map-marker" style="top: 53%; left: 35%;" data-tooltip="Lima, PER 🇵🇪"></span>
+  <span class="map-marker" style="top: 56%; left: 34%;" data-tooltip="Santiago, CHI 🇨🇱"></span>
+  <span class="map-marker" style="top: 55%; left: 32%;" data-tooltip="São Paulo, BRA 🇧🇷"></span>
+  <span class="map-marker" style="top: 54%; left: 30%;" data-tooltip="Buenos Aires, ARG 🇦🇷"></span>
+  <span class="map-marker" style="top: 44%; left: 76%;" data-tooltip="Tokyo, JPN 🇯🇵"></span>
+  <span class="map-marker" style="top: 43%; left: 75%;" data-tooltip="Seoul, KOR 🇰🇷"></span>
+  <span class="map-marker" style="top: 52%; left: 72%;" data-tooltip="Bangkok, THA 🇹🇭"></span>
+  <span class="map-marker" style="top: 47%; left: 77%;" data-tooltip="Taipei, TPE 🇹🇼"></span>
+  <span class="map-marker" style="top: 43%; left: 70%;" data-tooltip="Beijing, CHN 🇨🇳"></span>
+  <span class="map-marker" style="top: 55%; left: 78%;" data-tooltip="Manila, PH 🇵🇭"></span>
+  <span class="map-marker" style="top: 60%; left: 80%;" data-tooltip="Jakarta, IDN 🇮🇩"></span>
+  <span class="map-marker" style="top: 40%; left: 65%;" data-tooltip="London, UK 🇬🇧"></span>
+  <span class="map-marker" style="top: 42%; left: 62%;" data-tooltip="Paris, FRA 🇫🇷"></span>
+  <span class="map-marker" style="top: 41%; left: 68%;" data-tooltip="Berlin, GER 🇩🇪"></span>
+  <span class="map-marker" style="top: 40%; left: 63%;" data-tooltip="Amsterdam, NLD 🇳🇱"></span>
+  <span class="map-marker" style="top: 43%; left: 61%;" data-tooltip="Madrid, ESP 🇪🇸"></span>
+  <span class="map-marker" style="top: 45%; left: 65%;" data-tooltip="Milan, ITA 🇮🇹"></span>
+  <span class="map-marker" style="top: 42%; left: 70%;" data-tooltip="Warsaw, POL 🇵🇱"></span>
+</div>
+<style>
+  .map-marker {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  }
+  .map-marker:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.75);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    z-index: 10;
+  }
+  .leg1 { background-color: #e63946; }
+  .leg2 { background-color: #f4a261; }
+  .leg3 { background-color: #2a9d8f; }
+  .leg4 { background-color: #457b9d; }
+</style>
+    </section>
+
+    <section class="tour-section past-tours">
+      <h2>Past Tours</h2>
+      <ul>
+        <li><strong>LUX//TOUR</strong> (2023–2024)</li>
+        <li><strong>PRISM//LIVE</strong> Showcase Tour (2023)</li>
+        <li><strong>Glowline Debut Fan Tour</strong> (2021)</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
