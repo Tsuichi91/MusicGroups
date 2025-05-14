@@ -42,15 +42,9 @@
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-
     .tiles {
       display: grid;
-      grid-template-columns: repeat(2, 512px);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 40px;
       justify-content: center;
       padding: 40px 0;
@@ -60,8 +54,7 @@
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 12px;
-      width: 512px;
-      height: 512px;
+      height: 256px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -90,8 +83,7 @@
       align-items: center;
       justify-content: center;
     }
-  </style>
-<style>
+
     nav {
       position: fixed;
       top: 0;
@@ -103,15 +95,18 @@
       justify-content: center;
       z-index: 2;
     }
+
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     #backToTop {
       position: fixed;
       bottom: 20px;
@@ -138,14 +133,13 @@
     <a href="LUMINA6/Webistes/LUMINA6-Universe.html">Universe</a>
     <a href="LUMINA6/Webistes/LUMINA6-Quiz.html">Quiz</a>
     <a href="LUMINA6/Webistes/LUMINA6-Countdown.html">Countdown</a>
-     <a href="LUMINA6/Webistes/LUMINA6-Downloads.html">Downloads</a>
+    <a href="LUMINA6/Webistes/LUMINA6-Downloads.html">Downloads</a>
   </nav>
+
   <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Back to Top</button>
+
   <div class="content">
     <h1>LU●MINA6</h1>
-    <p></p>
-<p></p>
-    
     <div class="tiles">
       <a href="LUMINA6/Webistes/LUMINA6-Members.html" class="tile">
         <img src="LUMINA6/Logos/LUMINA6_Member_Profiles.png" alt="Member Profiles">
@@ -160,27 +154,24 @@
         <img src="LUMINA6/Logos/LUMINA6_Music_Interface.png" alt="Music Player">
       </a>
       <a href="LUMINA6/Webistes/LUMINA6-Universe.html" class="tile">
-        <img src="LUMINA6/Logos/LUMINA6_Univers.png" alt="The Universe">
+        <img src="LUMINA6/Logos/LUMINA6_Universe.png" alt="The Universe">
       </a>
       <a href="LUMINA6/Webistes/LUMINA6-Quiz.html" class="tile">
         <img src="LUMINA6/Logos/LUMINA6_Quiz.png" alt="Bias Quiz">
       </a>
       <a href="LUMINA6/Webistes/LUMINA6-Countdown.html" class="tile">
-        <img src="LUMINA6/Logos/LUMINA6_COUNTDOWN.png" alt="Comeback Countdown">
+        <img src="LUMINA6/Logos/LUMINA6_Countdown.png" alt="Comeback Countdown">
       </a>
-       <a href="LUMINA6/Webistes/LUMINA6-Downloadsa.html" class="tile">
-        <img src="LUMINA6/Logos/LUMINA6-Download.png" alt="Downloads">
+      <a href="LUMINA6/Webistes/LUMINA6-Downloads.html" class="tile">
+        <img src="LUMINA6/Logos/LUMINA6_Downloads.png" alt="Downloads">
       </a>
     </div>
   </div>
-<script>
+
+  <script>
     const backToTop = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTop.style.display = "block";
-      } else {
-        backToTop.style.display = "none";
-      }
+      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
     });
   </script>
 </body>
