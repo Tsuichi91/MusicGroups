@@ -107,26 +107,7 @@
       color: #555;
       margin-top: 2rem;
     }
-    .map-marker:hover {
-    z-index: 11;
-  }
-  .map-marker[data-target]:hover {
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
-  }
-</style>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.map-marker').forEach(marker => {
-      marker.addEventListener('click', () => {
-        const targetId = marker.getAttribute('data-target');
-        if (targetId) {
-          const section = document.getElementById(targetId);
-          if (section) section.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  });
-</script>
+  </style>
 </head>
 <body>
   <header>
@@ -145,70 +126,10 @@
   </nav>
   <main class="tour-container">
     
-<div style="text-align: center; margin-bottom: 1rem;">
-  <strong>Map Legend:</strong>
-  <span style="display: inline-block; width: 14px; height: 14px; background-color: #e63946; border-radius: 50%; margin: 0 5px;"></span> Leg 1
-  <span style="display: inline-block; width: 14px; height: 14px; background-color: #f4a261; border-radius: 50%; margin: 0 5px;"></span> Leg 2
-  <span style="display: inline-block; width: 14px; height: 14px; background-color: #2a9d8f; border-radius: 50%; margin: 0 5px;"></span> Leg 3
-  <span style="display: inline-block; width: 14px; height: 14px; background-color: #457b9d; border-radius: 50%; margin: 0 5px;"></span> Leg 4
+<div style="text-align: center; margin-bottom: 2rem;">
+  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1VYjefcZeM5AgNWVD6aUQdS4Ou0nH4AE&ehbc=2E312F&noprof=1" 
+          width="100%" height="480" style="border:0; border-radius: 10px;"></iframe>
 </div>
-       <div class="map-placeholder" style="position: relative; background: url('Pictures/WorldMapBase.png') center/contain no-repeat;">
-  <span class="map-marker" style="top: 38%; left: 48%;" data-tooltip="New York City, USA 🇺🇸"></span>
-  <span class="map-marker" style="top: 39%; left: 45%;" data-tooltip="Toronto, Canada 🇨🇦"></span>
-  <span class="map-marker" style="top: 40%; left: 47%;" data-tooltip="Chicago, USA 🇺🇸"></span>
-  <span class="map-marker" style="top: 43%; left: 46%;" data-tooltip="Atlanta, USA 🇺🇸"></span>
-  <span class="map-marker" style="top: 45%; left: 30%;" data-tooltip="San Francisco, USA 🇺🇸"></span>
-  <span class="map-marker" style="top: 46%; left: 32%;" data-tooltip="Los Angeles, USA 🇺🇸"></span>
-  <span class="map-marker" style="top: 42%; left: 33%;" data-tooltip="Vancouver, Canada 🇨🇦"></span>
-  <span class="map-marker" style="top: 42%; left: 35%;" data-tooltip="Mexico City, MEX 🇲🇽"></span>
-  <span class="map-marker" style="top: 51%; left: 38%;" data-tooltip="Bogotá, COL 🇨🇴"></span>
-  <span class="map-marker" style="top: 53%; left: 35%;" data-tooltip="Lima, PER 🇵🇪"></span>
-  <span class="map-marker" style="top: 56%; left: 34%;" data-tooltip="Santiago, CHI 🇨🇱"></span>
-  <span class="map-marker" style="top: 55%; left: 32%;" data-tooltip="São Paulo, BRA 🇧🇷"></span>
-  <span class="map-marker" style="top: 54%; left: 30%;" data-tooltip="Buenos Aires, ARG 🇦🇷"></span>
-  <span class="map-marker" style="top: 44%; left: 76%;" data-tooltip="Tokyo, JPN 🇯🇵"></span>
-  <span class="map-marker" style="top: 43%; left: 75%;" data-tooltip="Seoul, KOR 🇰🇷"></span>
-  <span class="map-marker" style="top: 52%; left: 72%;" data-tooltip="Bangkok, THA 🇹🇭"></span>
-  <span class="map-marker" style="top: 47%; left: 77%;" data-tooltip="Taipei, TPE 🇹🇼"></span>
-  <span class="map-marker" style="top: 43%; left: 70%;" data-tooltip="Beijing, CHN 🇨🇳"></span>
-  <span class="map-marker" style="top: 55%; left: 78%;" data-tooltip="Manila, PH 🇵🇭"></span>
-  <span class="map-marker" style="top: 60%; left: 80%;" data-tooltip="Jakarta, IDN 🇮🇩"></span>
-  <span class="map-marker" style="top: 40%; left: 65%;" data-tooltip="London, UK 🇬🇧"></span>
-  <span class="map-marker" style="top: 42%; left: 62%;" data-tooltip="Paris, FRA 🇫🇷"></span>
-  <span class="map-marker" style="top: 41%; left: 68%;" data-tooltip="Berlin, GER 🇩🇪"></span>
-  <span class="map-marker" style="top: 40%; left: 63%;" data-tooltip="Amsterdam, NLD 🇳🇱"></span>
-  <span class="map-marker" style="top: 43%; left: 61%;" data-tooltip="Madrid, ESP 🇪🇸"></span>
-  <span class="map-marker" style="top: 45%; left: 65%;" data-tooltip="Milan, ITA 🇮🇹"></span>
-  <span class="map-marker" style="top: 42%; left: 70%;" data-tooltip="Warsaw, POL 🇵🇱"></span>
-</div>
-<style>
-  .map-marker {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-  }
-  .map-marker:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.75);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-    font-size: 0.8rem;
-    z-index: 10;
-  }
-  .leg1 { background-color: #e63946; }
-  .leg2 { background-color: #f4a261; }
-  .leg3 { background-color: #2a9d8f; }
-  .leg4 { background-color: #457b9d; }
-</style>
     </section>
     <section class="tour-section">
       <h2>LU●MINA6 WORLD TOUR 2026<br><em>RISE UP: ONE LIGHT, SIX VOICES</em></h2>
