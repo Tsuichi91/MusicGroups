@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 - Tickets</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("Logos/LUMINA6_Logo.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .ticket-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .ticket-info {
+      margin-bottom: 1.5rem;
+    }
+    .buy-button {
+      background-color: #007BFF;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .buy-button:hover {
+      background-color: #0056b3;
+    }
+    #total-price {
+      font-weight: bold;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LU●MINA6 - Ticket Purchase</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="LUMINA6-Home.html">LU●MINA6 Home</a>
+    <a href="LUMINA6-Tour.html">Tour</a>
+    <a href="LUMINA6-Members.html">Members</a>
+    <a href="LUMINA6-Discography.html">Discography</a>
+    <a href="LUMINA6-Music.html">Music</a>
+    <a href="LUMINA6-Countdowns.html">Countdowns</a>
+    <a href="Lumina6-Univers.html">Univers</a>
+    <a href="LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6-Downloads.html">Downloads</a>
+  </nav>
+  <main class="ticket-container">
+    <h2>Get Your Tickets</h2>
+    <form id="ticket-form" class="ticket-info">
+      <label for="city-select"><strong>Select your city:</strong></label><br>
+      <select id="city-select" name="city" required>
+        <option value="">-- Choose --</option>
+        <option value="newyork" data-currency="$" data-rate="1">New York City, USA</option>
+        <option value="tokyo" data-currency="¥" data-rate="150">Tokyo, Japan</option>
+        <option value="seoul" data-currency="₩" data-rate="1350">Seoul, Korea</option>
+        <option value="london" data-currency="£" data-rate="0.79">London, UK</option>
+        <option value="paris" data-currency="€" data-rate="0.92">Paris, France</option>
+        <option value="mexico" data-currency="$" data-rate="17">Mexico City, Mexico</option>
+        <option value="toronto" data-currency="$" data-rate="1.36">Toronto, Canada</option>
+<option value="chicago" data-currency="$" data-rate="1">Chicago, USA</option>
+<option value="atlanta" data-currency="$" data-rate="1">Atlanta, USA</option>
+<option value="losangeles" data-currency="$" data-rate="1">Los Angeles, USA</option>
+<option value="sanfrancisco" data-currency="$" data-rate="1">San Francisco, USA</option>
+<option value="vancouver" data-currency="$" data-rate="1.36">Vancouver, Canada</option>
+<option value="bogota" data-currency="$" data-rate="3900">Bogotá, Colombia</option>
+<option value="lima" data-currency="S/" data-rate="3.7">Lima, Peru</option>
+<option value="santiago" data-currency="$" data-rate="920">Santiago, Chile</option>
+<option value="saopaulo" data-currency="R$" data-rate="5.1">São Paulo, Brazil</option>
+<option value="buenosaires" data-currency="$" data-rate="870">Buenos Aires, Argentina</option>
+<option value="bangkok" data-currency="฿" data-rate="36">Bangkok, Thailand</option>
+<option value="taipei" data-currency="NT$" data-rate="32">Taipei, Taiwan</option>
+<option value="beijing" data-currency="¥" data-rate="7.2">Beijing, China</option>
+<option value="manila" data-currency="₱" data-rate="57">Manila, Philippines</option>
+<option value="jakarta" data-currency="Rp" data-rate="16000">Jakarta, Indonesia</option>
+<option value="berlin" data-currency="€" data-rate="0.92">Berlin, Germany</option>
+<option value="amsterdam" data-currency="€" data-rate="0.92">Amsterdam, Netherlands</option>
+<option value="madrid" data-currency="€" data-rate="0.92">Madrid, Spain</option>
+<option value="milan" data-currency="€" data-rate="0.92">Milan, Italy</option>
+<option value="warsaw" data-currency="zł" data-rate="4.0">Warsaw, Poland</option>
+      </select><br><br>
+
+      <label for="ticket-type"><strong>Select ticket type:</strong></label><br>
+      <select id="ticket-type" name="ticket" required>
+        <option value="">-- Choose --</option>
+        <option value="orbit" data-price="399">LUMINA: ORBIT VIP</option>
+        <option value="frontzone" data-price="279">LUMINA: FRONT ZONE</option>
+        <option value="galaxy" data-price="139">LUMINA: GALAXY GA</option>
+        <option value="stardust" data-price="99">LUMINA: STARDUST SEAT</option>
+        <option value="eclipse" data-price="29">LUMINA: ECLIPSE PASS</option>
+      </select>
+      <div id="ticket-description" style="font-size: 0.9rem; color: #333; margin-top: 0.5rem; margin-bottom: 1rem;"></div>
+
+      <label><strong>Optional Add-ons:</strong></label><br>
+      <label><input type="checkbox" class="addon" data-price="49"> Light Device™ – $49</label><br>
+      <label><input type="checkbox" class="addon" data-price="19"> Photocard Case – $19</label><br>
+      <label><input type="checkbox" class="addon" data-price="35"> Tour Shirt – $35</label><br>
+      <label><input type="checkbox" class="addon" data-price="15"> Scrapbook Bundle – $15</label>
+
+      <div id="total-price"></div>
+      <br>
+      <label for="email"><strong>Your Email:</strong></label><br>
+      <input type="email" id="email" name="email" required style="width:100%; margin-top: 0.5rem; margin-bottom: 1rem; padding: 0.5rem;"><br>
+
+      <button type="submit" class="buy-button">Purchase Ticket</button>
+    </form>
+
+    <div class="ticket-info">
+      <h3>Important Info:</h3>
+      <ul>
+        <li>All tickets are digital and will be delivered via email.</li>
+        <li>VIP packages include exclusive merch and early access.</li>
+        <li>Livestream tickets available in select cities.</li>
+      </ul>
+    </div>
+  </main>
+  <script>
+    const ticketPrices = {
+      orbit: 399,
+      frontzone: 279,
+      galaxy: 139,
+      stardust: 99,
+      eclipse: 29
+    };
+    const ticketDescriptions = {
+      orbit: '💎 Includes Hi-Touch/Photo Op, Early Entry, Soundcheck, Merch, Signed Poster',
+      frontzone: '🔥 Priority Standing, Early Entry, Poster, Wristband, Lightstick Discount',
+      galaxy: '🌠 GA, Chant Guide, Tour Card, Fan Items',
+      stardust: '⭐ Seated, Digital Badge, Cushion Rental, Surprise Message',
+      eclipse: '🌘 Livestream, Digital Photocards, Backstage Room'
+    };
+    const currencyRate = () => {
+      const city = document.getElementById('city-select');
+      const selected = city.options[city.selectedIndex];
+      return {
+        symbol: selected.getAttribute('data-currency') || '$',
+        rate: parseFloat(selected.getAttribute('data-rate')) || 1
+      };
+    };
+    function calculateTotal() {
+      const ticket = document.getElementById('ticket-type');
+      const price = ticketPrices[ticket.value] || 0;
+      const addons = document.querySelectorAll('.addon:checked');
+      const addonTotal = [...addons].reduce((sum, item) => sum + Number(item.dataset.price), 0);
+      const { symbol, rate } = currencyRate();
+      const total = (price + addonTotal) * rate;
+      document.getElementById('total-price').innerText = `Total: ${symbol}${total.toFixed(2)}`;
+    }
+
+    document.getElementById('ticket-form').addEventListener('input', calculateTotal);
+    document.getElementById('ticket-type').addEventListener('change', function() {
+      const desc = ticketDescriptions[this.value] || '';
+      document.getElementById('ticket-description').innerText = desc;
+    });
+
+    document.getElementById('ticket-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const ticket = document.getElementById('ticket-type');
+      const ticketName = ticket.options[ticket.selectedIndex].text;
+      alert(`Thank you! You purchased: ${ticketName}\nConfirmation will be sent to ${email}`);
+    });
+  </script>
+</body>
+</html>
