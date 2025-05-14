@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 - Discography</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("Logos/LUMINA6_Logo.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav {
+      background-color: #222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .card-front {
+      background-color: white;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background-color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      overflow-y: auto;
+    }
+
+    ul {
+      text-align: left;
+      padding: 0 1rem;
+      margin: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.3rem;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
+        card.addEventListener('touchstart', () => {
+          card.classList.toggle('flipped');
+        }, {passive: true});
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>LU●MINA6 - Discography</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="LUMINA6-Home.html">LU●MINA6 Home</a>
+    <a href="LUMINA6-Members.html">Members</a>
+    <a href="LUMINA6-Tour.html">Tour</a>
+    <a href="LUMINA6-Music.html">Music</a>
+    <a href="LUMINA6-Countdowns.html">Countdowns</a>
+    <a href="Lumina6-Univers.html">Univers</a>
+    <a href="LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6-Downloads.html">Downloads</a>
+  </nav>
+
+  <h2>Studio Albums</h2>
+  <section class="grid">
+    <!-- Album 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="Music/Luminate-Album/Luminate_Album_Cover.png" alt="LUMINATE">
+        </div>
+        <div class="card-back">
+          <strong>LUMINATE</strong><br>
+          📅 Released: November 6, 2021
+          <ul>
+            <li>1. Starlight Code</li>
+            <li>2. No Sleep in Neon</li>
+            <li>3. Electric Bloom</li>
+            <li>4. Faultline</li>
+            <li>5. Echo/Shadow</li>
+            <li>6. Make Me Real (너라는 빛)</li>
+            <li>7. Tide Loop</li>
+            <li>8. City Ghosts</li>
+            <li>9. Backlight</li>
+            <li>10. We Burn Quiet</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Album 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="Music/Prism-Heart-Album/Prism-Heart_Album_Cover.png" alt="PRISM//HEART">
+        </div>
+        <div class="card-back">
+          <strong>PRISM//HEART</strong><br>
+          📅 Released: March 18, 2023
+          <ul>
+            <li>1. PRISM//HEART (Intro)</li>
+            <li>2. SUGARSTORM</li>
+            <li>3. Heartline Jump</li>
+            <li>4. Midnight Verse</li>
+            <li>5. Lovertype:∞</li>
+            <li>6. If You Say So</li>
+            <li>7. W A V E R (Interlude)</li>
+            <li>8. Butter Body</li>
+            <li>9. Hologram Touch</li>
+            <li>10. Half Light (너와 나의 색)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Album 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="Music/Infinite-Room/Infinite_Room-Album-Cover.png" alt="INFINITE ROOM">
+        </div>
+        <div class="card-back">
+          <strong>INFINITE ROOM</strong><br>
+          📅 Expected: May 24, 2025
+          <ul>
+            <li>1. Gravity Lies</li>
+            <li>2. Digital Eden</li>
+            <li>3. Lucid Out</li>
+            <li>4. Coldroom Call</li>
+            <li>5. Room 6</li>
+            <li>6. STATIC//SKIN</li>
+            <li>7. Glitch Darling</li>
+            <li>8. AFK (Away From Knowing)</li>
+            <li>9. IN//VISIBLE</li>
+            <li>10. 6° of Separation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2>Mini Albums</h2>
+  <section class="grid">
+    <!-- Mini Album 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LUMINA6/Music/Glowline/GLOWLINE_Album_Cover.png" alt="GLOWLINE">
+        </div>
+        <div class="card-back">
+          <strong>GLOWLINE</strong><br>
+          📅 Released: August 8, 2020
+          <ul>
+            <li>1. Glowline</li>
+            <li>2. Talk to Me (In Color)</li>
+            <li>3. Dusk Dancer</li>
+            <li>4. RE:Start</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mini Album 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LUMINA6/Music/VOX:6/VOX-6_Album_Cover.png" alt="VOX:6">
+        </div>
+        <div class="card-back">
+          <strong>VOX:6</strong><br>
+          📅 Released: October 22, 2022
+          <ul>
+            <li>1. 6AM Voices</li>
+            <li>2. Paper Sky</li>
+            <li>3. In My Language</li>
+            <li>4. Still You (너만)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2>Singles</h2>
+  <section class="grid">
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/Light-On-Me_Cover.png" alt="Light On Me"></div>
+      <div class="card-back"><strong>Light On Me</strong><br>📅 Released: April 10, 2020</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/Zero-Motion_Cover.png" alt="Zero Motion"></div>
+      <div class="card-back"><strong>Zero Motion</strong><br>📅 Released: July 15, 2020</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/Hush-Signal_Cover.png" alt="Hush Signal"></div>
+      <div class="card-back"><strong>Hush Signal</strong><br>📅 Released: October 1, 2020</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/Velvet-Crown_Cover.png" alt="Velvet Crown"></div>
+      <div class="card-back"><strong>Velvet Crown</strong><br>📅 Released: February 14, 2021</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/MIRRORS_Cover.png" alt="MIRRORS"></div>
+      <div class="card-back"><strong>MIRRORS</strong><br>📅 Released: July 20, 2021</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/PLAYDEAD_Cover.png" alt="PLAYDEAD"></div>
+      <div class="card-back"><strong>PLAYDEAD</strong><br>📅 Released: September 9, 2022</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/Moon-Like-Us_Cover.png" alt="Moon Like Us"></div>
+      <div class="card-back"><strong>Moon Like Us (Jiho & Haruka Duet)</strong><br>📅 Released: December 8, 2023</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/Butterfly_tension_Cover.png" alt="Butterfly Tension"></div>
+      <div class="card-back"><strong>Butterfly Tension</strong><br>📅 Released: April 14, 2024</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="Music/Singles/Louder-Then-Light_Cover.png" alt="LOUDER THAN LIGHT"></div>
+      <div class="card-back"><strong>LOUDER THAN LIGHT</strong><br>📅 Released: June 30, 2024</div>
+    </div></div>
+    <div class="card"><div class="card-inner">
+      <div class="card-front"><img src="LUMINA6/Music/Singles/Serotonin-Fever_Cover.png" alt="Serotonin Fever"></div>
+      <div class="card-back"><strong>Serotonin Fever</strong><br>📅 Released: February 21, 2025</div>
+    </div></div>
+  </section>
+</body>
+</html>
