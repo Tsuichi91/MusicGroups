@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background-image: url('LU●MINA6/Logos&Posters/Band_Logo.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(2, 512px);
+      gap: 40px;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .tile {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      width: 512px;
+      height: 512px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tile img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    .tile:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.02);
+    }
+
+    a.tile {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>LU●MINA6</h1>
+    <p></p>
+<p></p>
+    
+    <div class="tiles">
+      <a href="LU●MINA6/Websites/LUMINA6-Members.html" class="tile">
+        <img src="LU●MINA6/Logos&Posters/Member_Profiles_Logo.png" alt="Member Profiles">
+      </a>
+      <a href="LU●MINA6/Websites/LUMINA6-Discography.html" class="tile">
+        <img src="LU●MINA6/Logos&Posters/Discography.png" alt="Discography">
+      </a>
+      <a href="LU●MINA6/Websites/LUMINA6-Tour.html" class="tile">
+        <img src="LU●MINA6/Logos&Posters/Tour_Logo.png" alt="Tour Dates">
+      </a>
+      <a href="LU●MINA6/Websites/LUMINA6-Music.html" class="tile">
+        <img src="LU●MINA6/Logos&Posters/Music_Interface.png" alt="Music Player">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
