@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LU●MINA6 - Members</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: url("Logos/LUMINA6_Logo.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+
+    header {
+      background-color: #111;
+      padding: 1rem;
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .card-front {
+      background-color: white;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background-color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .color-box {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #ccc;
+      margin-left: 5px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
+        card.addEventListener('touchstart', () => {
+          card.classList.toggle('flipped');
+        }, {passive: true});
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>LU●MINA6 - Members</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="LUMINA6-Home.html">LU●MINA6 Home</a>
+    <a href="LUMINA6-Discography.html">Discography</a>
+    <a href="LUMINA6-Tour.html">Tour</a>
+    <a href="LUMINA6-Music.html">Music</a>
+    <a href="LUMINA6-Countdowns.html">Countdowns</a>
+    <a href="Lumina6-Univers.html">Univers</a>
+    <a href="LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6-Downloads.html">Downloads</a>
+  </nav>
+  <section class="grid">
+    <!-- Member 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LUMINA6/Members/LUMINA6_HARUKA.png" alt="HARUKA">
+        </div>
+        <div class="card-back">
+          <strong>🌸HARUKA (はるか) 🇩🇯</strong><br>
+          Name: Yamamoto Haruka (山本陽翔)<br>
+          Position: Lead Vocal · Visual<br>
+          Pronouns: he/him<br>
+          Birthday: March 8, 2001<br>
+          From: Tokyo, Japan<br>
+          Languages: Japanese, Korean, English<br>
+          Signature Color: Lilac <span class="color-box" style="background:#C5A3FF"></span><br>
+          About: Elegant and emotionally expressive, Haruka’s vocals bring softness and soul to LU●MINA6’s sound. Known for his cinematic stage presence and serene charm.<br>
+          Fun Fact: Huge fan of retro shojo anime and often designs his own stage earrings.
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LUMINA6/Members/LUMINA6_JIHO.png" alt="JIHO">
+        </div>
+        <div class="card-back">
+          <strong>🐺 JIHO (지호) 🇰🇷</strong><br>
+          Name: Lee Ji-ho (이지호)<br>
+          Position: Leader · Main Dancer · Sub Vocal<br>
+          Pronouns: he/him<br>
+          Birthday: May 17, 2000<br>
+          From: Seoul, South Korea<br>
+          Languages: Korean, English<br>
+          Signature Color: Ice Blue <span class="color-box" style="background:#AEE9F3"></span><br>
+          About: The composed and driven leader of LU●MINA6. Jiho commands the stage with sleek choreography and a calm intensity that anchors the group.<br>
+          Fun Fact: Performed at Seoul Pride in a performance-art piece on identity.
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LUMINA6/Members/LUMINA6_LEO.png" alt="LEO">
+        </div>
+        <div class="card-back">
+          <strong>🌞LEO 🇪🇸</strong><br>
+          Full Name: Leo Martínez Ortega<br>
+          Position: Sub Vocal · Moodmaker<br>
+          Pronouns: he/him<br>
+          Birthday: August 9, 2001<br>
+          From: Valencia, Spain<br>
+          Languages: Spanish, English, some Korean<br>
+          Signature Color: Sunset Orange <span class="color-box" style="background:#FF8F42"></span><br>
+          About: Leo is warmth personified — his sunny vocals and sincerity make him a fan favorite.<br>
+          Fun Fact: Danced flamenco before switching to vocals at 15.
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 4 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LUMINA6/Members/LUMINA6_NIRIN.png" alt="NIRIN">
+        </div>
+        <div class="card-back">
+          <strong>🫳NIRIN (นีริน) 🇹🇭</strong><br>
+          Name: Nirin Sirisopa (นิริน สิริโสภา)<br>
+          Position: Lead Dancer · Sub Vocal<br>
+          Pronouns: he/him<br>
+          Birthday: July 21, 2002<br>
+          From: Chiang Mai, Thailand<br>
+          Languages: Thai, English<br>
+          Signature Color: Rose Gold <span class="color-box" style="background:#F6B6A6"></span><br>
+          About: Playful yet precise, blends Thai movement with modern street choreography.<br>
+          Fun Fact: Choreographs in his sleep.
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 5 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LUMINA6/Members/LUMINA6_SKY.png" alt="SKY">
+        </div>
+        <div class="card-back">
+          <strong>🌌SKY 🌎</strong><br>
+          Full Name: Sky Miller<br>
+          Position: Main Vocal · Composer<br>
+          Pronouns: he/him<br>
+          Birthday: January 1, 2000<br>
+          From: Los Angeles, USA<br>
+          Languages: English, Korean<br>
+          Signature Color: Midnight Purple <span class="color-box" style="background:#5C2E91"></span><br>
+          About: Soulful voice, perfectionist, loves R&B and cinematic pop.<br>
+          Fun Fact: Writes lyrics daily, even during flights.
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 6 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LUMINA6/Members/LUMINA6_XIAO.png" alt="XIAO">
+        </div>
+        <div class="card-back">
+          <strong>🐉XIAO (晓) 🇨🇳</strong><br>
+          Name: Zhang Yinuo (张一诺)<br>
+          Position: Main Rapper · Lyricist<br>
+          Pronouns: he/him<br>
+          Birthday: December 29, 1999<br>
+          From: Chengdu, China<br>
+          Languages: Mandarin, English, Korean<br>
+          Signature Color: Crimson <span class="color-box" style="background:#D21F3C"></span><br>
+          About: Bilingual rapper with poetic lyrics and charisma.<br>
+          Fun Fact: Keeps a lyric book in brush calligraphy.
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
