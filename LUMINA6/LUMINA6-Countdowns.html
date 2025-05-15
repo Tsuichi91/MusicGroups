@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 - Countdowns</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url("Logos/LUMINA6_Logo.png") center/cover no-repeat fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .countdown {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: linear-gradient(135deg, #f0f0f0, #ffffff);
+      border-left: 6px solid #6a11cb;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .countdown h3 {
+      margin-top: 0;
+    }
+    .time {
+      font-size: 1.5rem;
+      color: #333;
+      margin-top: 0.5rem;
+    }
+  .countdown:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(106, 17, 203, 0.2);
+    }
+
+.time {
+      font-size: 1.6rem;
+      color: #6a11cb;
+      font-weight: bold;
+      margin-top: 0.5rem;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>LU●MINA6 - Countdowns</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="LUMINA6-Home.html">LU●MINA6 Home</a>
+    <a href="LUMINA6-Members.html">Members</a>
+    <a href="LUMINA6-Discography.html">Discography</a>
+    <a href="LUMINA6-Tour.html">Tour</a>
+    <a href="LUMINA6-Countdowns.html">Countdowns</a>
+    <a href="Lumina6-Univers.html">Univers</a>
+    <a href="LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6-Downloads.html">Downloads</a>
+  </nav>
+  <main>
+    <section class="countdown">
+      <h3>🎉 Next Album Release: "INFINITE ROOM"</h3>
+      <div class="time" id="countdown1"></div>
+    </section>
+    <section class="countdown">
+      <h3>📺 Upcoming MV Premiere: "STATIC//SKIN"</h3>
+      <div class="time" id="countdown2"></div>
+    </section>
+    <section class="countdown">
+  <h3>🎤 Tour Start: Leg 1 – New York City</h3>
+  <div class="time" id="countdown3"></div>
+</section>
+<section class="countdown">
+  <h3>🔥 Tour Start: Leg 2 – Mexico City</h3>
+  <div class="time" id="countdown4"></div>
+</section>
+<section class="countdown">
+  <h3>🌏 Tour Start: Leg 3 – Seoul</h3>
+  <div class="time" id="countdown5"></div>
+</section>
+<section class="countdown">
+  <h3>🎶 Tour Start: Leg 4 – Paris</h3>
+  <div class="time" id="countdown6"></div>
+</section>
+<section class="countdown">
+  <h3>🌐 Tour Finale – Global Livestream</h3>
+  <div class="time" id="countdown7"></div>
+</section>
+  </main>
+  <script>
+    function startCountdown(id, targetDate) {
+      function updateCountdown() {
+        const now = new Date();
+        const target = new Date(targetDate);
+        const diff = target - now;
+
+        if (diff <= 0) {
+          const pastDiff = now - target;
+          const hoursAgo = Math.floor(pastDiff / (1000 * 60 * 60));
+          const minutesAgo = Math.floor((pastDiff % (1000 * 60 * 60)) / (1000 * 60));
+          let message = "Released just now!";
+          if (hoursAgo > 0 || minutesAgo > 0) {
+            message = `Released ${hoursAgo > 0 ? hoursAgo + 'h ' : ''}${minutesAgo}m ago`;
+          }
+          document.getElementById(id).innerText = message;
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById(id).innerText =
+          `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    startCountdown("countdown1", "May 15, 2025 15:00:00");
+    startCountdown("countdown2", "May 15, 2025 12:00:00");
+    startCountdown("countdown3", "Feb 14, 2026 20:00:00");
+    startCountdown("countdown4", "Mar 10, 2026 20:00:00");
+    startCountdown("countdown5", "May 5, 2026 20:00:00");
+    startCountdown("countdown6", "Jul 7, 2026 20:00:00");
+    startCountdown("countdown7", "Aug 15, 2026 20:00:00");
+  </script>
+</body>
+</html>
 
