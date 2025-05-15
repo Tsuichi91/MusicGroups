@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 - Univers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url("Logos/LUMINA6_Logo.png") center/cover no-repeat fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #6a11cb;
+    }
+    .universe-section {
+      margin-bottom: 2rem;
+    }
+    .universe-section h3 {
+      margin-top: 0;
+      color: #444;
+    }
+    .universe-section p {
+      line-height: 1.6;
+      color: #333;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .tabs button {
+      background-color: #eee;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      margin: 0 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+    }
+    .tabs button.active {
+      background-color: #6a11cb;
+      color: white;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LU●MINA6 - Univers</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="LUMINA6-Home.html">LU●MINA6 Home</a>
+    <a href="LUMINA6-Members.html">Members</a>
+    <a href="LUMINA6-Discography.html">Discography</a>
+    <a href="LUMINA6-Tour.html">Tour</a>
+    <a href="LUMINA6-Countdowns.html">Countdowns</a>
+    <a href="Lumina6-Univers.html">Univers</a>
+    <a href="LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6-Downloads.html">Downloads</a>
+  </nav>
+  <main>
+    <h2>The LU●MINA6 Universe</h2>
+    <div class="tabs">
+      <button class="tab-button active" data-tab="lore">🔭 The Foundation</button>
+      <button class="tab-button" data-tab="timeline">🌠 Universe Pillars</button>
+      <button class="tab-button" data-tab="lore-full">📜 LU●MINA6 Lore</button>
+      <button class="tab-button" onclick="location.href='INTERACTIVE_UNIVERSE_URL'">🌌 Interactive Universe</button>
+    </div>
+
+    <div class="tab-content active" id="lore">
+      <div class="universe-section">
+        <h3>🔭 The Foundation</h3>
+        <p><strong>Name:</strong><br>
+        The LU●MINA6 Universe<br>
+        (Also referred to as LUNAVERSE for short)</p>
+        <p><strong>Core Themes:</strong></p>
+        <ul>
+          <li>Queer identity as a galaxy: shifting, fluid, radiant</li>
+          <li>Time travel / emotional memory loops</li>
+          <li>Multilingual connection as power</li>
+          <li>Dualities: light & shadow, human & symbol, chaos & clarity</li>
+          <li>Each member = a “LUMINA NODE” — a constellation of story, voice, and truth</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content" id="timeline">
+      <div class="universe-section">
+        <h3>🌠 Universe Pillars</h3>
+        <h4>1. THE ORBITAL SYSTEM</h4>
+        <p>Each member represents a “Lumina Core” — a symbolic planet, color, and emotional axis:</p>
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
+          <thead>
+            <tr style="background-color: #f4f4f4;">
+              <th>Member</th><th>Element</th><th>Color</th><th>Symbolic Trait</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sky</td><td>Ether</td><td>Opal Blue</td><td>Vision & Memory</td></tr>
+            <tr><td>Jiho</td><td>Earth</td><td>Deep Green</td><td>Grounding & Choice</td></tr>
+            <tr><td>Leo</td><td>Flame</td><td>Red Gold</td><td>Truth & Rebellion</td></tr>
+            <tr><td>Haruka</td><td>Ice</td><td>White/Silver</td><td>Stillness & Echo</td></tr>
+            <tr><td>Xiao</td><td>Mirror</td><td>Violet</td><td>Reflection & Duality</td></tr>
+            <tr><td>Nirin</td><td>Light</td><td>Rose Gold</td><td>Empathy & Spark</td></tr>
+          </tbody>
+        </table>
+        <p>Each planet connects through orbits called “Tracks” (songs) — and every album is a System Phase.</p>
+
+        <h4>2. CHRONO-LINES (Time Storylines)</h4>
+        <p>The albums form a narrative arc:</p>
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
+          <thead>
+            <tr style="background-color: #f4f4f4;">
+              <th>Album</th><th>Phase</th><th>Concept</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>ECLIPSE CORE</td><td>Phase 0</td><td>Origin of fragmentation & light</td></tr>
+            <tr><td>PRISM//HEART</td><td>Phase 1</td><td>Splintered selves seeking connection</td></tr>
+            <tr><td>INFINITE ROOM</td><td>Phase 2</td><td>Doors to every version of the self</td></tr>
+            <tr><td>GLOWLINE</td><td>Prequel Orbit</td><td>Summer of awakening, color & touch</td></tr>
+            <tr><td>VOX:6</td><td>Side Story (Solo)</td><td>Each voice as a truth</td></tr>
+            <tr><td>Singles</td><td>“Comets”</td><td>Standalone impact events</td></tr>
+          </tbody>
+        </table>
+
+        <h4>3. KEY SYMBOLS IN THE UNIVERSE</h4>
+        <ul>
+          <li><strong>●</strong> = Eclipse Point: Moment of total selfhood or self-loss</li>
+          <li><strong>PRISM</strong> = Emotional filter (used in PRISM//HEART)</li>
+          <li><strong>ROOM</strong> = Inner space (Infinite Room)</li>
+          <li><strong>FEVER / FLARE / SIGNAL</strong> = Externalized emotions</li>
+          <li><strong>CROWN / MASK / VEIL</strong> = Identity control mechanisms</li>
+          <li><strong>WINGS / VOID / THREADS</strong> = Connection to each other</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content" id="lore-full">
+      <div class="universe-section">
+        <h3>📜 LU●MINA6 Lore</h3>
+        <p>More information coming soon...</p>
+      </div>
+    </div>
+
+    
+    </div>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(tab => tab.classList.remove('active'));
+
+            button.classList.add('active');
+            const targetTab = document.getElementById(button.dataset.tab);
+            if (targetTab) {
+              targetTab.classList.add('active');
+            }
+          });
+        });
+      });
+    </script>
+  </main>
+</body>
+</html>
 
