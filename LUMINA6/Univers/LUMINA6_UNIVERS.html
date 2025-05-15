@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LU●MINA6 Universe Map</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body class="dark">
+  <header>
+    <h1>THE LU●MINA6 UNIVERSE</h1>
+    <button id="theme-toggle">🌙 Switch Theme</button>
+  </header>
+
+  <main>
+    <section class="universe-map">
+      <div class="orbit-container">
+        <!-- Planet Nodes -->
+        <div class="planet" id="sky" data-member="Sky" data-audio="sky.mp3">🜁</div>
+        <div class="planet" id="jiho" data-member="Jiho" data-audio="jiho.mp3">🜃</div>
+        <div class="planet" id="leo" data-member="Leo" data-audio="leo.mp3">🜂</div>
+        <div class="planet" id="haruka" data-member="Haruka" data-audio="haruka.mp3">🜄</div>
+        <div class="planet" id="xiao" data-member="Xiao" data-audio="xiao.mp3">🪞</div>
+        <div class="planet" id="nirin" data-member="Nirin" data-audio="nirin.mp3">🌈</div>
+      </div>
+    </section>
+
+    <section id="lore-card" class="hidden">
+      <h2 id="lore-name">Name</h2>
+      <p id="lore-text">Core information will appear here...</p>
+      <button onclick="closeLore()">Close</button>
+    </section>
+
+    <button id="symbol-toggle">☸️ Symbol Key</button>
+    <section id="symbol-key" class="hidden">
+      <h3>LU●MINA6 Universe Symbols</h3>
+      <ul>
+        <li>● – Eclipse Point</li>
+        <li>♡ – Prism Heart</li>
+        <li>∞ – Infinite Room</li>
+        <li>🜁 – Ether (Sky)</li>
+        <li>🜃 – Earth (Jiho)</li>
+        <li>🜂 – Flame (Leo)</li>
+        <li>🜄 – Water/Ice (Haruka)</li>
+        <li>🪞 – Mirror (Xiao)</li>
+        <li>🌈 – Flare (Group / Nirin)</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Optional audio preload -->
+  <audio id="audio-player" preload="auto"></audio>
+</body>
+</html>
 
