@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 - Music</title>
+  <style>
+    body {
+      color: #222;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("Logos/LUMINA6_Logo.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .music-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 100%);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h2, h3 {
+      text-align: center;
+    }
+    .album {
+      margin-bottom: 2rem;
+    }
+    .album-cover {
+      width: 120px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    .track-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.3s ease-in-out;
+    }
+    .carousel:hover .carousel-track {
+      animation-play-state: paused;
+    }
+    .carousel-slide {
+      min-width: 200px;
+      text-align: center;
+    }
+    .carousel-slide a {
+      display: block;
+    }
+    .carousel-slide img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-66.66%); }
+    }
+    audio {
+      width: 100%;
+      background: #f0f0f0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <h1>LU●MINA6 - Music</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="LUMINA6-Home.html">LU●MINA6 Home</a>
+    <a href="LUMINA6-Members.html">Members</a>
+    <a href="LUMINA6-Discography.html">Discography</a>
+    <a href="LUMINA6-Tour.html">Tour</a>
+    <a href="LUMINA6-Countdowns.html">Countdowns</a>
+    <a href="Lumina6-Univers.html">Univers</a>
+    <a href="LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6-Downloads.html">Downloads</a>
+  </nav>
+  <main class="music-container">
+  <div class="carousel">
+  <div class="carousel-track" style="animation: scroll 15s linear infinite;">
+    <div class="carousel-slide">
+      <a href="#Starlight_Code">
+        <img src="LUMINA6/Music/Luminate-Album/Luminate_Album_Cover.png" alt="Starlight Code">
+      </a>
+      <p><strong>Starlight Code</strong></p>
+    </div>
+    <div class="carousel-slide">
+      <a href="#Sugarstorm">
+        <img src="LUMINA6/Music/Prism-Heart-Album/Prism-Heart_Album_Cover.png" alt="SUGARSTORM">
+      </a>
+      <p><strong>SUGARSTORM</strong></p>
+    </div>
+    <div class="carousel-slide">
+      <a href="#PLAYDEAD">
+        <img src="LUMINA6/Music/Singles/PLAYDEAD_Cover.png" alt="PLAYDEAD">
+      </a>
+      <p><strong>PLAYDEAD</strong></p>
+    </div>
+  </div>
+</div>
+
+  <!-- Studio Albums -->
+  <h2>Studio Albums</h2>
+  <div class="album">
+  <h3 id="Starlight_Code">LUMINATE (2021)</h3>
+  <img src="Music/Luminate-Album/Luminate_Album_Cover.png" alt="Luminate Album Cover" class="album-cover">
+  <ul class="track-list">
+    <li>Starlight Code <audio controls src="LMusic/Luminate-Album/01. Starlight Code.mp3"></audio></li>
+    <li>No Sleep in Neon <audio controls src="Music/Luminate-Album/02. No Sleep in Neon.mp3"></audio></li>
+    <li>Electric Bloom <audio controls src="Music/Luminate-Album/03. Electric Bloom.mp3"></audio></li>
+    <li>Faultline <audio controls src="Music/Luminate-Album/04. Faultline.mp3"></audio></li>
+    <li>Echo/Shadow <audio controls src="Music/Luminate-Album/05. Echo-Shadow.mp3"></audio></li>
+    <li>Make Me Real (너라는 빛) <audio controls src="Music/Luminate-Album/06. Make Me Real (너라는 빛).mp3"></audio></li>
+    <li>Tide Loop <audio controls src="Music/Luminate-Album/07. Tide Loop.mp3"></audio></li>
+    <li>City Ghosts <audio controls src="Music/Luminate-Album/08. City Ghosts.mp3"></audio></li>
+    <li>Backlight <audio controls src="Music/Luminate-Album/09. Backlight.mp3"></audio></li>
+    <li>We Burn Quiet <audio controls src="Music/Luminate-Album/10. We Burn Quiet.mp3"></audio></li>
+  </ul>
+</div>
+  <div class="album">
+  <h3 id="Sugarstorm">PRISM//HEART (2023)</h3>
+  <img src="Music/Prism-Heart-Album/Prism-Heart_Album_Cover.png" alt="Prism Heart Cover" class="album-cover">
+  <ul class="track-list">
+    <li>PRISM//HEART (Intro) <audio controls src="Music/Prism-Heart-Album/01. PRISM HEART (Intro).mp3"></audio></li>
+    <li>SUGARSTORM <audio controls src="Music/Prism-Heart-Album/02. SUGARSTORM.mp3"></audio></li>
+    <li>Heartline Jump <audio controls src="Music/Prism-Heart-Album/03. Heartline Jump.mp3"></audio></li>
+    <li>Midnight Verse <audio controls src="LUMINA6/Music/Prism-Heart-Album/04. Midnight Verse.mp3"></audio></li>
+    <li>Lovertype:∞ <audio controls src="Music/Prism-Heart-Album/05. Lovertype_∞.mp3"></audio></li>
+    <li>If You Say So <audio controls src="Music/Prism-Heart-Album/06. If You Say So.mp3"></audio></li>
+    <li>W A V E R (Interlude) <audio controls src="Music/Prism-Heart-Album/07.W A V E R (Interlude).mp3"></audio></li>
+    <li>Butter Body <audio controls src="Music/Prism-Heart-Album/08. Butter Body.mp3"></audio></li>
+    <li>Hologram Touch <audio controls src="Music/Prism-Heart-Album/09. Hologram Touch.mp3"></audio></li>
+    <li>Half Light (너와 나의 색) <audio controls src="Music/Prism-Heart-Album/10. Half Light (너와 나의 색).mp3></audio></li>
+  </ul>
+</div>
+  <div class="album">
+  <h3>INFINITE ROOM (2025)</h3>
+  <img src="Music/Infinite-Room/Infinite_Room-Album-Cover.png" alt="Infinite Room Cover" class="album-cover">
+  <ul class="track-list">
+    <li>Gravity Lies <audio controls src="Music/Infinite-Room/01. Gravity Lies.mp3"></audio></li>
+    <li>Digital Eden <audio controls src="Music/Infinite-Room/02. Digital Eden.mp3"></audio></li>
+    <li>Lucid Out <audio controls src="Music/Infinite-Room/03. Lucid Out.mp3"></audio></li>
+    <li>Coldroom Call <audio controls src="Music/Infinite-Room/04. Coldroom Call.mp3"></audio></li>
+    <li>Room 6 <audio controls src="Music/Infinite-Room/05. Room 6.mp3"></audio></li>
+    <li>STATIC//SKIN <audio controls src="Music/Infinite-Room/06. STATIC-SKIN.mp3"></audio></li>
+    <li>Glitch Darling <audio controls src="Music/Infinite-Room/08. AFK (Away From Knowing).mp3></audio></li>
+    <li>AFK (Away From Knowing) <audio controls src="Music/Infinite-Room/08. AFK (Away From Knowing).mp3"></audio></li>
+    <li>IN//VISIBLE <audio controls src="Music/Infinite-Room/09. IN__VISIBLE.mp3"></audio></li>
+    <li>6° of Separation <audio controls src="Music/Infinite-Room/10. 6° of Separation.mp3"></audio></li>
+  </ul>
+</div>
+
+  <!-- Mini Albums -->
+  <h2>Mini Albums</h2>
+  <div class="album">
+  <h3>VOX:6 (2022 – Mini Album)</h3>
+  <img src="Music/VOX:6/VOX-6_Album_Cover.png" alt="VOX:6 Album Cover" class="album-cover">
+  <ul class="track-list">
+    <li>6AM Voices <audio controls src="Music/VOX:6/01. 6AM Voices.mp3"></audio></li>
+    <li>Paper Sky <audio controls src="Music/VOX:6/02. Paper Sky.mp3"></audio></li>
+    <li>In My Language <audio controls src="Music/VOX:6/03. In My Language.mp3"></audio></li>
+    <li>Still You (너만) <audio controls src="Music/VOX:6/04. Still You (너만).mp3"></audio></li>
+  </ul>
+</div>
+  <div class="album">
+  <h3>GLOWLINE (2020 – Mini Album)</h3>
+  <img src="Music/Glowline/GLOWLINE_Album_Cover.png" alt="Glowline Album Cover" class="album-cover">
+  <ul class="track-list">
+    <li>Glowline <audio controls src="Music/Glowline/01. Glowline.mp3"></audio></li>
+    <li>Talk to Me (In Color) <audio controls src="Music/Glowline/02 Talk to Me (In Color).mp3"></audio></li>
+    <li>Dusk Dancer <audio controls src="Music/Glowline/03. Dusk Dancer.mp3"></audio></li>
+    <li>RE:Start <audio controls src="Music/Glowline/04. RE_Start.mp3"></audio></li>
+  </ul>
+</div>
+
+  <!-- Singles -->
+  <h2>Singles</h2>
+  <div class="album">
+  <h3>Singles (2020–2025)</h3>
+  <ul class="track-list">
+    <li><img src="Music/Singles/Light-On-Me_Cover.png" alt="Light On Me" class="album-cover"> Light On Me <audio controls src="Music/Singles/01. Light On Me.mp3"></audio></li>
+    <li><img src="Music/Singles/Zero-Motion_Cover.png" alt="Zero Motion" class="album-cover"> Zero Motion <audio controls src="Music/Singles/01. Zero Motion.mp3"></audio></li>
+    <li><img src="Music/Singles/Hush-Signal_Cover.png" alt="Hush Signal" class="album-cover"> Hush Signal <audio controls src="Music/Singles/01. Hush Signal.mp3"></audio></li>
+    <li><img src="Music/Singles/Velvet-Crown_Cover.png" alt="Velvet Crown" class="album-cover"> Velvet Crown <audio controls src="Music/Singles/01. Velvet Crown.mp3"></audio></li>
+    <li><img src="Music/Singles/MIRRORS_Cover.png" alt="MIRRORS" class="album-cover"> MIRRORS <audio controls src="Music/Singles/01. MIRRORS.mp3"></audio></li>
+    <li><img src="Music/Singles/PLAYDEAD_Cover.png" alt="PLAYDEAD" class="album-cover"> PLAYDEAD <audio controls src="Music/Singles/01. PLAYDEAD.mp3"></audio></li>
+    <li><img src="Music/Singles/Moon-Like-Us_Cover.pngg" alt="Moon Like Us" class="album-cover"> Moon Like Us (Jiho & Haruka Duet) <audio controls src="Music/Singles/01. Moon Like Us (Jiho & Haruka Duet).mp3"></audio></li>
+    <li><img src="Music/Singles/Butterfly_tension_Cover.png" alt="Butterfly Tension" class="album-cover"> Butterfly Tension <audio controls src="Music/Singles/01. Butterfly Tension.mp3"></audio></li>
+    <li><img src="Music/Singles/Louder-Then-Light_Cover.png" alt="LOUDER THAN LIGHT" class="album-cover"> LOUDER THAN LIGHT <audio controls src="Music/Singles/01. LOUDER THAN LIGHT.mp3"></audio></li>
+    <li><img src="Music/Singles/Serotonin-Fever_Cover.png" alt="Serotonin Fever" class="album-cover"> Serotonin Fever <audio controls src="Music/Singles/01. Serotonin Fever.mp3"></audio></li>
+  </ul>
+</div>
+</main>
+</body>
+</html>
