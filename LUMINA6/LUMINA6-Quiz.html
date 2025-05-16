@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LU●MINA6 - Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('Logos/LUMINA6_Logo.png') center/cover no-repeat fixed;
+      margin: 0;
+      padding: 0;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #6a11cb;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .tabs button {
+      background-color: #eee;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      margin: 0 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+    }
+    .tabs button.active {
+      background-color: #6a11cb;
+      color: white;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .question, .results {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    button[type="submit"] {
+      display: block;
+      margin: 2rem auto;
+      background-color: #6a11cb;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #6a11cb;
+    }
+    .result-display {
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LU●MINA6 - Quiz</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="LUMINA6-Home.html">LU●MINA6 Home</a>
+    <a href="LUMINA6-Members.html">Members</a>
+    <a href="LUMINA6-Discography.html">Discography</a>
+    <a href="LUMINA6-Tour.html">Tour</a>
+    <a href="LUMINA6-Countdowns.html">Countdowns</a>
+    <a href="Lumina6-Univers.html">Univers</a>
+    <a href="LUMINA6-Quiz.html">Quiz</a>
+    <a href="LUMINA6-Downloads.html">Downloads</a>
+  </nav>
+  <main>
+    <h2>LU●MINA6 Quiz</h2>
+    <div class="tabs">
+      <button class="tab-button active" data-tab="tab1">📚 Lore Quiz</button>
+      <button class="tab-button" data-tab="tab2">✨ LUMACORE Energy</button>
+    </div>
+
+    <div class="tab-content active" id="tab1">
+      <form id="loreQuizForm">
+        <div class="question">
+          <h3>How well do you know LU●MINA6?</h3>
+          <ol>
+            ${["B","B","B","A","C","C","B","A","A","C","B","C","A","B","A"].map((correct, i) => `
+              <li>
+                <p>Q${i+1}</p>
+                <label><input type="radio" name="lq${i+1}" value="A" required> A</label>
+                <label><input type="radio" name="lq${i+1}" value="B"> B</label>
+                <label><input type="radio" name="lq${i+1}" value="C"> C</label>
+              </li>
+            `).join('')}
+          </ol>
+          <button type="submit">Check My Score</button>
+        </div>
+      </form>
+      <div id="loreResult" class="result-display"></div>
+    </div>
+
+    <div class="tab-content" id="tab2">
+      <!-- Existing form and logic for LUMACORE Energy unchanged -->
+      <form id="coreQuizForm">
+        <div class="question">
+          <h3>Which LUMACORE Energy Flows Through You?</h3>
+          <p>Answer honestly and see your result.</p>
+          <ol>
+            ${[...Array(10).keys()].map(i => `
+              <li>
+                <label><input type="radio" name="q${i + 1}" value="A" required> A</label>
+                <label><input type="radio" name="q${i + 1}" value="B"> B</label>
+                <label><input type="radio" name="q${i + 1}" value="C"> C</label>
+                <label><input type="radio" name="q${i + 1}" value="D"> D</label>
+                <label><input type="radio" name="q${i + 1}" value="E"> E</label>
+                <label><input type="radio" name="q${i + 1}" value="F"> F</label>
+              </li>
+            `).join('')}
+          </ol>
+          <button type="submit">Get My Core</button>
+        </div>
+      </form>
+      <div id="coreResult" class="result-display"></div>
+    </div>
+
+    <script>
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          tabButtons.forEach(btn => btn.classList.remove("active"));
+          tabContents.forEach(content => content.classList.remove("active"));
+          button.classList.add("active");
+          const target = document.getElementById(button.dataset.tab);
+          if (target) target.classList.add("active");
+        });
+      });
+
+      document.getElementById("coreQuizForm")?.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const counts = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
+        for (let i = 1; i <= 10; i++) {
+          const answer = document.querySelector(`input[name="q${i}"]:checked`).value;
+          counts[answer]++;
+        }
+        const maxLetter = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+        const results = {
+          A: '🔮 You are SKY – Ether Core: intuitive, dreamy, spiritual. 🜁',
+          B: '🌍 You are JIHO – Earth Core: grounded, dependable, loyal. 🜃',
+          C: '🔥 You are LEO – Flame Core: bold, brave, passionate. 🜂',
+          D: '❄️ You are HARUKA – Ice Core: poetic, observant, quiet. 🜄',
+          E: '🪞 You are XIAO – Mirror Core: introspective, empathic. 🪞',
+          F: '🌈 You are NIRIN – Flare Core: joyful, uplifting, radiant. 🌈'
+        };
+        document.getElementById("coreResult").innerHTML = `<strong>${results[maxLetter]}</strong>`;
+      });
+
+      document.getElementById("loreQuizForm")?.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const answers = ["B","B","B","A","C","C","B","A","A","C","B","C","A","B","A"];
+        let score = 0;
+        answers.forEach((correct, i) => {
+          const selected = document.querySelector(`input[name="lq${i+1}"]:checked`).value;
+          if (selected === correct) score++;
+        });
+        let rank = '';
+        if (score >= 13) rank = '🌈 LUNACORE LEGEND';
+        else if (score >= 9) rank = '💫 Official Orbitheart';
+        else if (score >= 5) rank = '✨ Luna Trainee';
+        else rank = '🌙 New to the Stars — welcome!';
+        document.getElementById("loreResult").innerHTML = `<strong>You got ${score}/15 correct.<br>${rank}</strong>`;
+      });
+    </script>
+  </main>
+</body>
+</html>
